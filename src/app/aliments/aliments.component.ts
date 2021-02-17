@@ -9,6 +9,10 @@ export class AlimentsComponent implements OnInit {
 
   constructor() { }
 
+  public alimentSelectedList=[
+    {name:'tomate'}
+  ]
+
   ngOnInit() {
     
   }

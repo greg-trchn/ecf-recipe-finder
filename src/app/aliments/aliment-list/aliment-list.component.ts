@@ -8,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class AlimentListComponent implements OnInit {
 
   constructor() { }
+  public alimentList=[
+    {name:'tomate'},
+    {name:'orange'},
+    {name:'riz'}
+  ]
+ 
 
-  ngOnInit() {}
+  ngOnInit() {console.log(this.alimentList);
+  }
 
 }
