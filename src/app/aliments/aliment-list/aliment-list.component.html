@@ -1,4 +1,4 @@
-<datalist>
-  <!--<option *ngFor="let aliment of alimentList" value="aliment.name" (click)="get($event)"></option>-->
-  <option  #myInput  value="toto" (change)="getAlimentList(myInput.value)"></option>
-</datalist>
+
+ <ul>
+  <li *ngFor="let aliment of alimentSelectedList" value="aliment.name"><app-aliment></app-aliment></li>
+ </ul>

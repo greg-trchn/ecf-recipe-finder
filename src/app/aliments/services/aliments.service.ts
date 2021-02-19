@@ -13,12 +13,12 @@ export class AlimentsService {
 
   get(search:string): Observable<Aliment[]> {
     return this.client
-      .get<Aliment[]>(environment.api.url, {
-       aliment:search
+      .get<Aliment[]>(environment.api.url, {responseType:"json",    
 
       }).pipe(tap((data: Aliment[]) => {
         console.log(data);
       })
   ,)
   }
+  
 }

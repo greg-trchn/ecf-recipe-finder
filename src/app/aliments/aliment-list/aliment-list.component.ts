@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { Aliment } from '../model/aliment.model';
 import { AlimentsService } from '../services/aliments.service';
 
@@ -10,8 +10,8 @@ import { AlimentsService } from '../services/aliments.service';
 export class AlimentListComponent implements OnInit, AfterViewInit {
 
   constructor(private service:AlimentsService) { }
-  public alimentList:Aliment[];
-
+  
+  @Input() alimentSelectedList:Aliment[];
   
   ngAfterViewInit(): void {
 
@@ -24,19 +24,9 @@ export class AlimentListComponent implements OnInit, AfterViewInit {
   ]
  */
 
-  ngOnInit() {console.log(this.alimentList);
-  this.getAlimentList
-  }
-  getAlimentList(search:string){
-
-
-    console.log();
-    
-    return this.service.get(search).subscribe((values:Aliment[])=>{
-
-      this.alimentList=values;
+  ngOnInit() {
   
-    });
   }
+
   
 }

@@ -1,19 +1,11 @@
 
-=======
-<!-- <ion-header no-border style="background-color: aqua;"> -->
-
  <app-navbar></app-navbar>
-
- <ion-router-outlet></ion-router-outlet>
-
- 
-
+<h1>Rechercher un aliment</h1>
+ <input type="text" #myInput /> 
  <ul>
-    <li *ngFor="let aliment of alimentSelectedList" value="aliment.name"> aliment.name</li>
-</ul>
-
-
-<!-- </ion-header>
-
-<ion-content></ion-content> -->
-<!--  -->
+    <!--<option  (click)="get($event)"></option>-->
+    <li  (init)="getAlimentList(myInput.value)" *ngFor="let aliment of alimentList" value="aliment.name" ></li>
+ </ul>
+<h2>Aliments Choisies</h2>
+ <ion-router-outlet  ></ion-router-outlet>
+ <h2>Recettes</h2>
