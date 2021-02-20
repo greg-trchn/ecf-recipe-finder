@@ -9,10 +9,26 @@ import { AlimentsService } from '../services/aliments.service';
 })
 export class AlimentListComponent implements OnInit, AfterViewInit {
 
-  constructor(private service:AlimentsService) { }
+  alimentSelectedList:Aliment[];
+  alimentList:Aliment[];
+    
+
+  constructor(private service:AlimentsService) { 
+
+
+  }
+  ngOnInit(): void {
+    this.alimentList=[new Aliment('tomate'),new Aliment('orange')];
+    this.alimentSelectedList=[new Aliment('riz'),new Aliment('pomme de terre')];
+
+  }
+add(aliment:Aliment){
+  this.alimentSelectedList.push(aliment);
+  console.log(this.alimentSelectedList);
   
-  @Input() alimentSelectedList:Aliment[];
-  
+}
+
+
   ngAfterViewInit(): void {
 
   }
@@ -24,9 +40,7 @@ export class AlimentListComponent implements OnInit, AfterViewInit {
   ]
  */
 
-  ngOnInit() {
-  
-  }
+
 
   
 }

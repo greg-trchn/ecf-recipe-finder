@@ -9,26 +9,29 @@ import { AlimentsService } from './services/aliments.service';
 })
 export class AlimentsComponent implements OnInit {
 
-  constructor(private service:AlimentsService) { }
+ 
+  constructor() { 
+   
+  }
 
-  public alimentList:Aliment[];
-  public alimentSelectedList=[
-    {name:'tomate'}
-  ]
+ 
 
   ngOnInit() {
     
   }
+  /*
   getAlimentList(search:string){
 
-    /*
+    
     return this.service.get(search).subscribe((values:Aliment[])=>{
 
       this.alimentList=values;
   
     });
-    */
-   this.alimentList=[new Aliment("tomate"),new Aliment("haricot")]
+    
+   
+   
+    
   }
-
+*/
 }

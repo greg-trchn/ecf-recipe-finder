@@ -8,7 +8,7 @@ import { Aliment } from '../../model/aliment.model';
 })
 export class AlimentComponent implements OnInit {
   constructor() { }
-  @Input() aliment:Aliment;
+  @Input() alimentInput:Aliment;
 
 
   ngOnInit() {}

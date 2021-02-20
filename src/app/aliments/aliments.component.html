@@ -1,11 +1,3 @@
 
- <app-navbar></app-navbar>
-<h1>Rechercher un aliment</h1>
- <input type="text" #myInput /> 
- <ul>
-    <!--<option  (click)="get($event)"></option>-->
-    <li  (init)="getAlimentList(myInput.value)" *ngFor="let aliment of alimentList" value="aliment.name" ></li>
- </ul>
-<h2>Aliments Choisies</h2>
- <ion-router-outlet  ></ion-router-outlet>
- <h2>Recettes</h2>
+<ion-router-outlet ></ion-router-outlet>
+<app-navbar></app-navbar>

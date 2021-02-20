@@ -1,4 +1,12 @@
 
- <ul>
-  <li *ngFor="let aliment of alimentSelectedList" value="aliment.name"><app-aliment></app-aliment></li>
+
+
+<label for="datalist">Rechercher un aliment</label>
+<input list="data" name="data">
+<datalist #datalist id="data" >
+    <option *ngFor='let aliment of alimentList' (blur)="add(aliment)" [value]='aliment.name' ><app-aliment [alimentInput]="aliment"></app-aliment></option>
+</datalist>
+<label for="basket">Mes aliments</label>
+ <ul #basket>
+  <li *ngFor="let alimentSelected of alimentSelectedList" value="aliment.name"> <app-aliment [alimentInput]="alimentSelected"></app-aliment></li>
  </ul>
